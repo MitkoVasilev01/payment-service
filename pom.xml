@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
 <modelVersion>4.0.0</modelVersion>
 
-		<!-- ВАЖНО: Трябва да е същия Spring Boot като главния проект -->
 <parent>
 <groupId>org.springframework.boot</groupId>
 <artifactId>spring-boot-starter-parent</artifactId>

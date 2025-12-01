@@ -13,15 +13,12 @@ public class Payment {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    // ID-то на резервацията, която идва от главното приложение
     @Column(nullable = false)
     private UUID reservationId;
 
     private Double amount;
 
     private LocalDateTime paymentDate;
-
-    // Конструктори, Getters и Setters
     public Payment() {}
 
     public Payment(UUID reservationId, Double amount) {

@@ -17,7 +17,6 @@ public class PaymentController {
         this.paymentRepository = paymentRepository;
     }
 
-    // Endpoint 1: Създаване на плащане (ще се вика от Main App)
     @PostMapping
     public ResponseEntity<Payment> processPayment(@RequestParam("reservationId") UUID reservationId,
                                                   @RequestParam("amount") Double amount) {
@@ -30,7 +29,6 @@ public class PaymentController {
         return ResponseEntity.ok(savedPayment);
     }
 
-    // Endpoint 2: Взимане на детайли (Изискване за GET endpoint)
     @GetMapping("/{id}")
     public ResponseEntity<Payment> getPayment(@PathVariable UUID id) {
         return paymentRepository.findById(id)
